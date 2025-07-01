@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python: Операторы</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variables.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Основы Python с нуля</h1>
+            <p>Интерактивный учебник Python для начинающих</p>
+        </div>
+    </header>
+    <!-- Навигация и прогресс-бар, закомментировано, так как не используется в этом примере -->
+    <!-- <div class="container content"> 
+        <nav class="navigation"> 
+            <ul> 
+                <li> <a href="#page-0"> История Python</a> </li> 
+                <li> <a href="#page-1"> Начало работы</a> </li> 
+                <li> <a href="variables.html"> Переменные</a> </li> 
+                <li> <a href="data-types.html"> Типы данных</a> </li> 
+                <li> <a href="operators.html"> Операторы</a> </li> 
+                <li> <a href="control-structures.html"> Условные конструкции</a> </li> 
+                <li> <a href="loops.html"> Циклы</a> </li> 
+                <li> <a href="functions.html"> Функции</a> </li> 
+            </ul> 
+        </nav> 
+        <div class="progress-bar"> 
+            <div class="progress" style="width: 0%;"> </div> 
+        </div> 
+    </div>  
+     -->
+    <div class="container content">
+        <section id="operators">
+            <div class="card">
+                <h2>Операторы</h2>
+                <p>Python поддерживает различные типы операторов для работы с переменными и значениями.</p>
+                <h3>Арифметические операторы</h3>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="arithmetic-code" oninput="updateLineNumbers(this)" placeholder="# Input your code here">a = 10
+b = 3
+
+print(f"Сложение: {a} + {b} = {a + b}")
+print(f"Вычитание: {a} - {b} = {a - b}")
+print(f"Умножение: {a} * {b} = {a * b}")
+print(f"Деление: {a} / {b} = {a / b}")
+print(f"Целочисленное деление: {a} // {b} = {a // b}")
+print(f"Остаток: {a} % {b} = {a % b}")
+print(f"Возведение в степень: {a} ** {b} = {a ** b}")</textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('arithmetic-code', 'arithmetic-output')" placeholder="# Input your code here">Выполнить</button>
+                    </div>
+                    <div class="output" id="arithmetic-output"></div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-title">Упражнение</div>
+                    <p>Вычислите площадь прямоугольника длиной 8 и шириной 5. Выведите результат.</p>
+                    <h3 style="font-style: italic; color: black;">area = length * width</h3>
+                    <div class="code-quiz__container">
+                        <div class="code-editor code-quiz__code">
+                            <div class="code-editor__lines"></div>
+                            <textarea class="code-editor__textarea" id="op-exercise" oninput="updateLineNumbers(this)" placeholder="# Input your code here"></textarea>
+                        </div>
+                        <div class="code-quiz__buttons">
+                            <button class="run-button" onclick="runCode('op-exercise', 'op-exercise-output')">Выполнить</button>
+                        </div>
+                        <div class="output" id="op-exercise-output"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="code-quiz__buttons">
+        <a href="data-types.html" class="run-button next-btn">Назад</a>
+        <a href="control-flow.html" class="run-button next-btn">Следующий шаг</a>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Создано <b style="color: #00eeff;"> Nazarow Tuwakmammet😎 <p style="display: none;"> and Ted_Wassowski😀</p></b></p>
+            <p>Создано с ❤️ для изучающих Python</p>
+            <p>© 2025 Учебник по Python. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <script src="script.js"></script>
+    <script src="variables.js"></script>
+</body>
+</html>

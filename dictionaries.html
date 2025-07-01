@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python: Словари</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variables.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Основы Python с нуля</h1>
+            <p>Интерактивный учебник Python для начинающих</p>
+        </div>
+    </header>
+    <!-- Навигация и прогресс-бар, закомментировано, так как не используется в этом примере -->
+    <!-- <div class="container content"> 
+        <nav class="navigation"> 
+            <ul> 
+                <li> <a href="#page-0"> История Python</a> </li> 
+                <li> <a href="#page-1"> Начало работы</a> </li> 
+                <li> <a href="variables.html"> Переменные</a> </li> 
+                <li> <a href="data-types.html"> Типы данных</a> </li> 
+                <li> <a href="operators.html"> Операторы</a> </li> 
+                <li> <a href="control-structures.html"> Условные конструкции</a> </li> 
+                <li> <a href="loops.html"> Циклы</a> </li> 
+                <li> <a href="functions.html"> Функции</a> </li> 
+            </ul> 
+        </nav> 
+        <div class="progress-bar"> 
+            <div class="progress" style="width: 0%;"> </div> 
+        </div> 
+    </div>  
+     -->
+    <div class="container content">
+        <section id="dictionaries">
+            <div class="card">
+                <h2>Словари</h2>
+                <p>Словари — это неупорядоченные коллекции пар ключ-значение. Они оптимизированы для быстрого поиска по ключу.</p>
+                <h3>Создание словарей</h3>
+                <div class="code-block">
+                    <pre><code># Создание словаря
+person = {
+    "name": "Алиса",
+    "age": 25,
+    "is_student": True
+}
+
+# Доступ к значениям
+print(person["name"])  # Выведет: "Алиса"
+
+# Добавление или изменения значений
+person["occupation"] = "Разработчик"
+person["age"] = 26
+
+# Удаление значений
+del person["is_student"]</code></pre>
+                </div>
+                <h3>Методы словарей</h3>
+                <div class="code-block">
+                    <pre><code># Получить все ключи
+keys = person.keys()
+
+# Получить все значения
+values = person.values()
+
+# Получить все пары ключ-значение
+items = person.items()
+
+# Проверить наличие ключа
+if "name" in person:
+    print("Ключ 'name' есть в словаре")</code></pre>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-title"><h2>Упражнение</h2></div>
+                    <p>Создайте словарь с информацией о вашей любимой книге (название, автор, год издания и т.д.) и выведите каждую информацию.</p>
+                    <div class="code-quiz__container">
+                        <div class="code-editor code-quiz__code">
+                            <div class="code-editor__lines"></div>
+                            <textarea class="code-editor__textarea" id="dict-exercise" oninput="updateLineNumbers(this)" placeholder="# Input your code here"></textarea>
+                        </div>
+                        <div class="code-quiz__buttons">
+                            <button class="run-button" onclick="runCode('dict-exercise', 'dict-exercise-output')">Выполнить</button>
+                        </div>
+                        <div class="output" id="dict-exercise-output"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Вложенные словари</h3>
+                <div class="note">
+                    <div class="note-title">Словарь внутри словаря</div>
+                    <p>Словари могут содержать другие словари как значения. Это удобно для хранения сложных структур данных.</p>
+                </div>
+                <div class="code-block"><pre>student = {
+    "name": "Иван",
+    "grades": {
+        "math": 5,
+        "physics": 4
+    }
+}
+print(student["grades"]["math"])</pre></div>
+            </div>
+            <div class="card">
+                <h3>Перебор элементов словаря</h3>
+                <div class="note">
+                    <div class="note-title">Перебор ключей и значений</div>
+                    <p>Можно перебирать ключи, значения или пары ключ-значение с помощью циклов.</p>
+                </div>
+                <div class="code-block"><pre>person = {"name": "Алиса", "age": 25}
+for key in person:
+    print(key, person[key])
+
+for value in person.values():
+    print(value)
+
+for key, value in person.items():
+    print(key, value)</pre></div>
+            </div>
+            <div class="card">
+                <h3>Методы get и setdefault</h3>
+                <div class="note">
+                    <div class="note-title">Безопасный доступ к значениям</div>
+                    <p><code>get()</code> возвращает значение по ключу или None, если ключа нет. <code>setdefault()</code> добавляет ключ со значением, если его не было.</p>
+                </div>
+                <div class="code-block"><pre>person = {"name": "Алиса"}
+print(person.get("age"))  # None
+print(person.get("age", 18))  # 18
+person.setdefault("city", "Москва")
+print(person)</pre></div>
+            </div>
+            <div class="note">
+                <div class="note-title"><h2>Совет</h2></div>
+                <p>Ключи словаря должны быть неизменяемыми типами (например, строка, число, кортеж).</p>
+            </div>
+            <div class="note">
+                <div class="note-title"><h2>Интересный факт</h2></div>
+                <p>Словари в Python реализованы на основе хеш-таблиц, что обеспечивает быстрый доступ к данным.</p>
+            </div>
+        </section>
+    </div>
+    <div class="code-quiz__buttons">
+        <a href="lists.html" class="run-button next-btn">Назад</a>
+        <a href="final.html" class="run-button next-btn">Следующий шаг</a>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Создано <b style="color: #00eeff;"> Nazarow Tuwakmammet😎</b></p>
+            <p>Создано с ❤️ для изучающих Python</p>
+            <p>© 2025 Учебник по Python. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <script src="script.js"></script>
+    <script src="variables.js"></script>
+</body>
+</html>

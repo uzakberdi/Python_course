@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python: Списки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variables.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Основы Python с нуля</h1>
+            <p>Интерактивный учебник Python для начинающих</p>
+        </div>
+    </header>
+    <!-- Навигация и прогресс-бар, закомментировано, так как не используется в этом примере -->
+    <!-- <div class="container content"> 
+        <nav class="navigation"> 
+            <ul> 
+                <li> <a href="#page-0"> История Python</a> </li> 
+                <li> <a href="#page-1"> Начало работы</a> </li> 
+                <li> <a href="variables.html"> Переменные</a> </li> 
+                <li> <a href="data-types.html"> Типы данных</a> </li> 
+                <li> <a href="operators.html"> Операторы</a> </li> 
+                <li> <a href="control-structures.html"> Условные конструкции</a> </li> 
+                <li> <a href="loops.html"> Циклы</a> </li> 
+                <li> <a href="functions.html"> Функции</a> </li> 
+            </ul> 
+        </nav> 
+        <div class="progress-bar"> 
+            <div class="progress" style="width: 0%;"> </div> 
+        </div> 
+    </div>  
+     -->
+    <div class="container content">
+        <section id="lists">
+            <div class="card">
+                <h2>Списки</h2>
+                <p>Списки — это упорядоченные изменяемые коллекции элементов. Это один из самых универсальных типов данных в Python.</p>
+                <h3>Операции со списками</h3>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="list-code" oninput="updateLineNumbers(this)" placeholder="# Input your code here">fruits = ["яблоко", "банан", "вишня"]
+
+# Доступ к элементам
+print("Первый фрукт:", fruits[0])
+
+# Изменение элементов
+fruits[1] = "черника"
+print("Изменённый список:", fruits)
+
+# Добавление элементов
+fruits.append("апельсин")
+print("После добавления:", fruits)
+
+# Удаление элементов
+fruits.remove("яблоко")
+print("После удаления:", fruits)
+
+# Длина списка
+print("Количество фруктов:", len(fruits))</textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('list-code', 'list-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="list-output"></div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-title">Упражнение</div>
+                    <p>Создайте список ваших любимых фильмов и выведите каждый фильм с помощью цикла.</p>
+                    <div class="code-quiz__container">
+                        <div class="code-editor code-quiz__code">
+                            <div class="code-editor__lines"></div>
+                            <textarea class="code-editor__textarea" id="list-exercise" oninput="updateLineNumbers(this)" placeholder="# Input your code here"></textarea>
+                        </div>
+                        <div class="code-quiz__buttons">
+                            <button class="run-button" onclick="runCode('list-exercise', 'list-exercise-output')">Выполнить</button>
+                        </div>
+                        <div class="output" id="list-exercise-output"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="code-quiz__buttons">
+        <a href="functions.html" class="run-button next-btn">Назад</a>
+        <a href="dictionaries.html" class="run-button next-btn">Следующий шаг</a>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Создано <b style="color: #00eeff;"> Nazarow Tuwakmammet😎<p style="display: none;"> and Ted_Wassowski😀</p></b></p>
+            <p>Создано с ❤️ для изучающих Python</p>
+            <p>© 2025 Учебник по Python. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <script src="script.js"></script>
+    <script src="variables.js"></script>
+</body>
+</html>

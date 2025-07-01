@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python: Управляющие конструкции</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variables.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Основы Python с нуля</h1>
+            <p>Интерактивный учебник Python для начинающих</p>
+        </div>
+    </header>
+
+    <!-- Навигация и прогресс-бар, закомментировано, так как не используется в этом примере -->
+    <!-- <div class="container content"> 
+        <nav class="navigation"> 
+            <ul> 
+                <li> <a href="#page-0"> История Python</a> </li> 
+                <li> <a href="#page-1"> Начало работы</a> </li> 
+                <li> <a href="variables.html"> Переменные</a> </li> 
+                <li> <a href="data-types.html"> Типы данных</a> </li> 
+                <li> <a href="operators.html"> Операторы</a> </li> 
+                <li> <a href="control-structures.html"> Условные конструкции</a> </li> 
+                <li> <a href="loops.html"> Циклы</a> </li> 
+                <li> <a href="functions.html"> Функции</a> </li> 
+            </ul> 
+        </nav> 
+        <div class="progress-bar"> 
+            <div class="progress" style="width: 0%;"> </div> 
+        </div> 
+    </div>  
+     -->
+
+    <div class="container content">
+        <section id="control-flow">
+            <div class="card">
+                <h2>Управляющие конструкции</h2>
+                <p>Управляющие конструкции позволяют управлять порядком выполнения кода.</p>
+                <h3>Условные операторы</h3>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code" style="display: flex;">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="if-code" oninput="updateLineNumbers(this)" style="flex: 1; resize: none;" placeholder="# Input your code here">age = 18
+
+if age < 13:
+    print("Ребёнок")
+elif age < 18:
+    print("Подросток")
+else:
+    print("Взрослый")
+</textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('if-code', 'if-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="if-output"></div>
+                </div>
+                <h3>Циклы</h3>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code" style="display: flex;">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="loop-code" oninput="updateLineNumbers(this)" style="flex: 1; resize: none;" placeholder="# Input your code here"># Цикл for
+print("Считаем вверх:")
+for i in range(5):
+    print(i)
+
+# Цикл while
+print("\nСчитаем вниз:")
+count = 5
+while count > 0:
+    print(count)
+    count -= 1</textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('loop-code', 'loop-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="loop-output"></div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-title"><h2>Упражнение</h2></div>
+                    <p>Напишите программу, которая выводит все чётные числа от 0 до 20 с помощью цикла.</p>
+                    <textarea class="code-editor__textarea" id="even-numbers-code" oninput="updateLineNumbers(this)" style="flex: 1; resize: none;" placeholder="# Input your code here"></textarea>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('even-numbers-code', 'even-numbers-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="even-numbers-output"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="code-quiz__buttons">
+        <a href="variables.html" class="run-button next-btn">Назад</a>
+        <a href="functions.html" class="run-button next-btn">Следующий шаг</a>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Создано <b style="color: #00eeff;"> Nazarow Tuwakmammet😎</b><p style="display: none;"> and Ted_Wassowski😀</p></p>
+            <p>Создано с ❤️ для изучающих Python</p>
+            <p>© 2025 Учебник по Python. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <script src="script.js"></script>
+    <script src="variables.js"></script>
+</body>
+</html>

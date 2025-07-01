@@ -1,0 +1,307 @@
+:root {
+    --primary: #4a6fa5;
+    --secondary: #166088;
+    --accent: #4fc3f7;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    color: var(--primary);
+}
+
+nav {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.content {
+    padding: 2rem 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.code-block {
+    background-color: #f5f5f5;
+    border-left: 4px solid var(--accent);
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 0 4px 4px 0;
+}
+
+.code-block pre {
+    margin: 0;
+}
+
+.language-tabs {
+    display: flex;
+    margin-bottom: -1px;
+}
+
+.language-tab {
+    padding: 0.5rem 1rem;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    margin-right: 0.5rem;
+}
+
+.language-tab.active {
+    background-color: #f5f5f5;
+    border-color: #dee2e6;
+    border-bottom-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.note {
+    background-color: #e7f5ff;
+    border-left: 4px solid var(--accent);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.note-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+}
+
+.exercise {
+    background-color: #f8f9fa;
+    border-left: 4px solid #28a745;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.exercise-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #28a745;
+}
+
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* Стили для изображений в истории Python */
+.python-history-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.python-logo {
+    height: 190px;
+    background: white;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 2px 8px #0001;
+}
+.giudo-img, .guido-img {
+    height: 190px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* Стили для .code-editor */
+.code-editor {
+    width: 100%;
+    min-width: 320px;
+    max-width: 100%;
+    min-height: 80px;
+    max-height: 180px;
+    resize: none;
+}
+.code-editor-wrapper {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+}
+.line-numbers {
+    background: #f0f0f0;
+    color: #aaa;
+    padding: 12px 8px 12px 6px;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 1.1rem;
+    text-align: right;
+    user-select: none;
+    border-right: 1px solid #e0e0e0;
+    min-width: 32px;
+}
+.line-number {
+    height: 1.5em;
+    line-height: 1.5em;
+}
+.line-number.error-line {
+    background: #ffb3b3;
+    color: #b30000;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.next-btn {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Стили для .output */
+.output {
+    /* Можно добавить стили для вывода */
+}
+
+.code-quiz__container {
+    background: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    padding: 18px 16px 16px 16px;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.code-quiz__code {
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    min-height: 120px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.code-editor__textarea {
+    width: 100%;
+    min-height: 120px;
+    max-height: 220px;
+    border: none;
+    background: transparent;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 1.1rem;
+    padding: 12px 14px;
+    outline: none;
+    color: #222;
+    box-sizing: border-box;
+    resize: none;
+    line-height: 1.5;
+}
+.code-quiz__container .run-button {
+    align-self: flex-end;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+}
+.code-quiz__container .run-button:hover {
+    background: #333;
+}
+.output {
+    background: #222;
+    color: #fff;
+    border-radius: 8px;
+    padding: 16px 18px;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 1rem;
+    margin-top: 1rem;
+    white-space: pre-wrap;
+    min-height: 32px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python: Типы данных</title>
+    <link rel="stylesheet" href="variables.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Основы Python с нуля</h1>
+            <p>Интерактивный учебник Python для начинающих</p>
+        </div>
+    </header>
+    
+    <!-- Навигация и прогресс-бар, закомментировано, так как не используется в этом примере -->
+    <!-- <div class="container content"> 
+        <nav class="navigation"> 
+            <ul> 
+                <li> <a href="#page-0"> История Python</a> </li> 
+                <li> <a href="#page-1"> Начало работы</a> </li> 
+                <li> <a href="variables.html"> Переменные</a> </li> 
+                <li> <a href="data-types.html"> Типы данных</a> </li> 
+                <li> <a href="operators.html"> Операторы</a> </li> 
+                <li> <a href="control-structures.html"> Условные конструкции</a> </li> 
+                <li> <a href="loops.html"> Циклы</a> </li> 
+                <li> <a href="functions.html"> Функции</a> </li> 
+            </ul> 
+        </nav> 
+        <div class="progress-bar"> 
+            <div class="progress" style="width: 0%;"> </div> 
+        </div> 
+    </div>  
+     -->
+
+    <div class="container content">
+        <section id="data-types">
+            <div class="card">
+                <h2>Типы данных</h2>
+                <p>В Python есть несколько встроенных типов данных. Вот самые распространённые:</p>
+                <h3>Базовые типы данных</h3>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="ex3-code" oninput="updateLineNumbers(this)" placeholder="# Input your code here">color = "синий"
+y = 3.14
+print(type(y), y)
+name = "Python"
+print(type(name), name)
+is_true = True
+print(type(is_true), is_true)
+</textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('ex3-code', 'ex3-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="ex3-output"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>Сравнение изменяемых и неизменяемых типов</h3>
+                    <div class="note">
+                        <div class="note-title">Изменяемые и неизменяемые типы</div>
+                        <p><b>Неизменяемые:</b> <code>int</code>, <code>float</code>, <code>str</code>, <code>tuple</code>, <code>bool</code>, <code>None</code>.<br>
+                        <b>Изменяемые:</b> <code>list</code>, <code>dict</code>, <code>set</code>.</p>
+                    </div>
+                    <div class="code-block"><pre># Пример: неизменяемость строки
+s = "hello"
+s2 = s.replace("h", "H")
+print(s)   # hello
+print(s2)  # Hello
+
+# Пример: изменяемость списка
+lst = [1, 2, 3]
+lst.append(4)
+print(lst)  # [1, 2, 3, 4]</pre></div>
+                </div>
+                <div class="card">
+                    <h3>Преобразование типов</h3>
+                    <div class="note">
+                        <div class="note-title">Преобразование типов (type casting)</div>
+                        <p>Можно преобразовывать значения из одного типа в другой с помощью функций <code>int()</code>, <code>float()</code>, <code>str()</code>, <code>list()</code> и т.д.</p>
+                    </div>
+                    <div class="code-block"><pre>x = "123"
+y = int(x)
+print(type(y), y)  # <class 'int'> 123
+
+z = str(3.14)
+print(type(z), z)  # <class 'str'> 3.14</pre></div>
+                </div>
+                <div class="card">
+                    <h3>Таблица основных типов данных</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Тип</th><th>Пример</th><th>Описание</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>int</td><td>42</td><td>Целое число</td></tr>
+                            <tr><td>float</td><td>3.14</td><td>Число с плавающей точкой</td></tr>
+                            <tr><td>str</td><td>"Python"</td><td>Строка</td></tr>
+                            <tr><td>bool</td><td>True</td><td>Логический тип</td></tr>
+                            <tr><td>None</td><td>None</td><td>Отсутствие значения</td></tr>
+                            <tr><td>list</td><td>[1, 2, 3]</td><td>Список (изменяемый)</td></tr>
+                            <tr><td>tuple</td><td>(1, 2, 3)</td><td>Кортеж (неизменяемый)</td></tr>
+                            <tr><td>dict</td><td>{'a': 1}</td><td>Словарь (ключ-значение)</td></tr>
+                            <tr><td>set</td><td>{1, 2, 3}</td><td>Множество (уникальные значения)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="note">
+                    <div class="note-title">Совет</div>
+                    <p>Используйте функцию <code>type()</code> для проверки типа переменной.</p>
+                </div>
+                <div class="note">
+                    <div class="note-title">Интересный факт</div>
+                    <p>В Python всё является объектом, даже числа и функции!</p>
+                </div>
+        </section>
+    </div>
+    <div class="exercise">
+                    <div class="exercise-title">Упражнение</div>
+                    <p>Создайте переменные разных типов и используйте функцию type() для проверки их типа.</p>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="ex4-code" oninput="updateLineNumbers(this)" placeholder="# Input your code here"></textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('ex4-code', 'ex4-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="ex4-output"></div>
+                </div>
+    <div class="code-quiz__buttons">
+        <a href="variables.html" class="run-button next-btn">Назад</a>
+        <a href="operators.html" class="run-button next-btn">Следующий шаг</a>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Создано <b style="color: #00eeff;"> Nazarow Tuwakmammet😎<p style="display: none;"> and Ted_Wassowski😀</p></b></p>
+            <p>Создано с ❤️ для изучающих Python</p>
+            <p>© 2025 Учебник по Python. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <script src="script.js"></script>
+    <script src="variables.js"></script>
+</body>
+</html>

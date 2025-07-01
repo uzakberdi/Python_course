@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python: Переменные</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variables.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Основы Python с нуля</h1>
+            <p>Интерактивный учебник Python для начинающих</p>
+        </div>
+    </header>
+
+    <!-- Навигация и прогресс-бар, закомментировано, так как не используется в этом примере -->
+    <!-- <div class="container content"> 
+        <nav class="navigation"> 
+            <ul> 
+                <li> <a href="#page-0"> История Python</a> </li> 
+                <li> <a href="#page-1"> Начало работы</a> </li> 
+                <li> <a href="variables.html"> Переменные</a> </li> 
+                <li> <a href="data-types.html"> Типы данных</a> </li> 
+                <li> <a href="operators.html"> Операторы</a> </li> 
+                <li> <a href="control-structures.html"> Условные конструкции</a> </li> 
+                <li> <a href="loops.html"> Циклы</a> </li> 
+                <li> <a href="functions.html"> Функции</a> </li> 
+            </ul> 
+        </nav> 
+        <div class="progress-bar"> 
+            <div class="progress" style="width: 0%;"> </div> 
+        </div> 
+    </div>  
+     -->
+    <div class="container content">
+        <section class="page" id="page-3">
+            <div class="card">
+                <h2>Переменные</h2>
+                <p>Переменные используются для хранения данных в программе. В Python не нужно явно указывать тип переменной.</p>
+                <h3>Создание переменных</h3>
+                <div class="note">
+                    <div class="note-title">Что такое переменная?</div>
+                    <p>Переменная — это именованная область памяти, в которой хранится значение. В Python переменные создаются при первом присваивании, а их тип определяется автоматически.</p>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-title">Пример</div>
+                    <div class="code-block"><pre>name = "Алиса"  # строка
+age = 25        # целое число
+height = 1.68   # число с плавающей точкой
+is_student = True  # булево значение</pre></div>
+                    <p>Python позволяет использовать кириллицу в именах переменных, но рекомендуется использовать латиницу для совместимости.</p>
+                </div>
+                <div class="note">
+                    <div class="note-title">Совет</div>
+                    <p>Имена переменных чувствительны к регистру: <code>Age</code> и <code>age</code> — это разные переменные.</p>
+                </div>
+                <div class="note">
+                    <div class="note-title">Интересный факт</div>
+                    <p>В Python не нужно объявлять тип переменной заранее. Это называется <b>динамической типизацией</b>.</p>
+                </div>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="variable-code" oninput="updateLineNumbers(this)" placeholder="# Input your code here">name = "Алиса"
+age = 25
+height = 1.68
+is_student = True
+
+print(f"Имя: {name}")
+print(f"Возраст: {age}")
+print(f"Рост: {height}")
+print(f"Студент: {is_student}")</textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('variable-code', 'variable-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="variable-output"></div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="page-4">
+            <div class="card">
+                <h2><div class="exercise-title">Упражнение 1</div></h2>
+                <p>Создайте переменную <code>city</code> и присвойте ей название вашего города. Выведите её.</p>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="ex2-code" oninput="updateLineNumbers(this)" placeholder="# Input your code here"></textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('ex2-code', 'ex2-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="ex2-output"></div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="page-5">
+            <div class="card">
+                <h2><div class="exercise-title">Упражнение 2</div></h2>
+                <p>Измените значение <code>age</code> на ваш реальный возраст и выведите его.</p>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="ex3-code" oninput="updateLineNumbers(this)" placeholder="# Input your code here"></textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('ex3-code', 'ex3-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="ex3-output"></div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="page-6">
+            <div class="card">
+                <h2><div class="exercise-title">Упражнение 3</div></h2>
+                <p>Создайте переменные для вашего любимого цвета и хобби, затем выведите их в одной строке.</p>
+                <div class="code-quiz__container">
+                    <div class="code-editor code-quiz__code">
+                        <div class="code-editor__lines"></div>
+                        <textarea class="code-editor__textarea" id="ex4-code" oninput="updateLineNumbers(this)" placeholder="# Input your code here"></textarea>
+                    </div>
+                    <div class="code-quiz__buttons">
+                        <button class="run-button" onclick="runCode('ex4-code', 'ex4-output')">Выполнить</button>
+                    </div>
+                    <div class="output" id="ex4-output"></div>
+                </div>
+            </div>
+        </section>
+        <div class="code-quiz__buttons">
+            <a href="getting-started.html" class="run-button next-btn">Назад</a>
+            <a href="data-types.html" class="run-button next-btn">Следующий шаг</a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Создано <b style="color: #00eeff;"> Nazarow Tuwakmammet😎</b></p>
+            <p>Создано с ❤️ для изучающих Python</p>
+            <p>© 2025 Учебник по Python. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <script src="script.js"></script>
+    <script src="variables.js"></script>
+</body>
+</html>
